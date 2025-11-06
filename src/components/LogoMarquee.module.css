@@ -1,0 +1,80 @@
+@keyframes marquee {
+  0% { transform: translate3d(0,0,0); }
+  100% { transform: translate3d(-50%,0,0); }
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0; /* Add vertical spacing between marquee rows */
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* track is a single long row (we duplicate content in markup) */
+  width: max-content;
+  will-change: transform;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* duration helper classes */
+.d18 { animation-duration: 18s; }
+.d20 { animation-duration: 20s; }
+.d22 { animation-duration: 22s; }
+.d15 { animation-duration: 15s; }
+
+/* reverse direction helper */
+.reverse { animation-direction: reverse; }
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* rounded rectangle behind logo */
+  background: rgba(255,255,255,0.98);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  margin: 0.5rem;
+  min-width: 140px;
+  min-height: 80px;
+}
+
+@media (min-width: 768px) {
+  .item {
+    padding: 1.5rem;
+    min-width: 180px;
+    min-height: 100px;
+  }
+}
+
+.item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  display: block;
+  filter: grayscale(0.02) saturate(0.95);
+}
+
+/* responsive size */
+@media (min-width: 640px) {
+  .logo { height: 40px; }
+}
+
+@media (min-width: 768px) {
+  .logo { height: 48px; }
+}
+
+@media (min-width: 1024px) {
+  .logo { height: 56px; }
+}
