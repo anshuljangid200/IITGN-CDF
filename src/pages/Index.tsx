@@ -8,26 +8,32 @@ import { Button } from "@/components/ui/button";
 import Board from "@/components/Board";
 import LogoMarquee from "@/components/LogoMarquee";
 import styles from "./Index.module.css";
+import CarouselBackground from "@/components/CarouselBackground"; // ✅ ADDED
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-            {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative pt-24 pb-20 lg:pt-32 lg:pb-32 overflow-hidden">
-        {/* Gradient Background */}
+
+        {/* ✅ Background Carousel Inserted */}
+        <CarouselBackground />
+
+        {/* ✅ Your Existing Gradients (kept exactly same) */}
         <div className="absolute inset-0 bg-gradient-hero opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
 
         <div className="container relative mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <div 
-              className="inline-flex items-center space-x-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4"
+              className="inline-flex items-center space-x-2 bg-black/40 text-primary-foreground px-4 py-2 rounded-full mb-4 backdrop-blur-lg border border-white/20 shadow-md"
             >
               <Sparkles className="w-4 h-4" />
               <span>Experience world-class education</span>
             </div>
+
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-6 leading-tight">
               Build Your Future with{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
@@ -52,6 +58,7 @@ const Index = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
+
               <Button
                 asChild
                 size="lg"
@@ -70,21 +77,9 @@ const Index = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                icon: <Award className="w-6 h-6" />,
-                value: "3",
-                label: "Programs",
-              },
-              {
-                icon: <Users className="w-6 h-6" />,
-                value: "Growing",
-                label: "Community of learners",
-              },
-              {
-                icon: <BookOpen className="w-6 h-6" />,
-                value: "100%",
-                label: "Career-ready Skills",
-              },
+              { icon: <Award className="w-6 h-6" />, value: "3", label: "Programs" },
+              { icon: <Users className="w-6 h-6" />, value: "Growing", label: "Community of learners" },
+              { icon: <BookOpen className="w-6 h-6" />, value: "100%", label: "Career-ready Skills" },
             ].map((stat, index) => (
               <div
                 key={index}
@@ -93,9 +88,7 @@ const Index = () => {
                 <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mx-auto mb-4 shadow-soft">
                   <div className="text-primary-foreground">{stat.icon}</div>
                 </div>
-                <div className="text-4xl font-bold text-foreground mb-2">
-                  {stat.value}
-                </div>
+                <div className="text-4xl font-bold text-foreground mb-2">{stat.value}</div>
                 <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
@@ -148,9 +141,7 @@ const Index = () => {
       {/* Board of Directors Section */}
       <section className="bg-muted/30">
         <Board />
-        
-        {/* Partner logos: two rows for Hiring Partners and one row for Trusted Companies.
-            Use explicit filenames from the public folders so logos load reliably. */}
+
         {(() => {
           const hiringPaths = [
             '/OUR%20HIRING%20PARTNERS/Apple.svg',
