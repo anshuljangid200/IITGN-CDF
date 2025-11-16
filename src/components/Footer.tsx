@@ -13,7 +13,7 @@ const Footer = () => {
                 <img src="/logo2.png" alt="IITGN logo" className="w-full h-full object-contain" />
               </div>
               <div>
-                <h3 className="font-bold text-foreground text-base">IITGN-CDF</h3>
+                <h3 className="font-bold text-foreground text-base">IITGN CDF</h3>
                 <p className="text-xs text-muted-foreground">Competency Foundation</p>
               </div>
             </div>
@@ -88,13 +88,13 @@ const Footer = () => {
               <li className="flex items-start space-x-3 group">
                 <Mail className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a href="mailto:info@iitgn.ac.in" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium break-all">
-                  info@iitgn.ac.in
+                  cdf@iitgn.ac.in
                 </a>
               </li>
               <li className="flex items-start space-x-3 group">
                 <Phone className="w-5 h-5 text-primary mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                 <a href="tel:+917923951100" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium">
-                  +91-79-2395-1100
+                  +91-79-2395-2278
                 </a>
               </li>
               <li className="flex items-start space-x-3">

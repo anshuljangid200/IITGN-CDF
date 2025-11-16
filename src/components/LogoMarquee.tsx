@@ -88,3 +88,4 @@ function MarqueeRow({
     </div>
   );
 }
+
