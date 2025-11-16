@@ -43,7 +43,12 @@ const Admissions = () => {
               Apply for IIT Gandhinagar's Competency Development Foundation Programs and take the next step in your career.
             </p>
             <Button size="lg" className="bg-gradient-primary hover:opacity-90 shadow-medium">
+              <a href="https://admission.futurense.com/?program=IITGPGD&gmid=KN462" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
               Begin Application
+              </a>
             </Button>
           </div>
         </div>
@@ -148,7 +153,12 @@ const Admissions = () => {
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 shadow-large"
             >
+              <a href="https://admission.futurense.com/?program=IITGPGD&gmid=KN462" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
               Start Your Application
+              </a>
             </Button>
           </div>
         </div>

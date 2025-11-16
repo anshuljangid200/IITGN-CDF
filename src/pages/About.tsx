@@ -7,23 +7,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const missions = [
   {
     icon: <Award className="w-6 h-6" />,
-    title: "Deliver Advanced Training",
-    description: "Programs in AI, Data Science, Software Development, and emerging technologies",
+    title: "Accelerate Talent for Future Technologies",
+    description: "Develop immediately deployable learners for next-generation fields such as AI, Generative AI, Cloud Engineering, Data Science, and Intelligent Automation, ensuring they are industry-ready from day one.",
   },
   {
     icon: <Users className="w-6 h-6" />,
-    title: "Foster Academia-Industry Collaboration",
-    description: "Bridge the gap between academic knowledge and industry requirements",
+    title: "Build High-Impact Career Pathways",
+    description: "Enable meaningful career transitions through rigorous training, mentorship, and structured placement support.",
   },
   {
     icon: <Target className="w-6 h-6" />,
-    title: "Enable Lifelong Learning",
-    description: "Provide reskilling and upskilling opportunities through IIT Gandhinagar's academic rigor",
+    title: "Advance Research-Informed Learning",
+    description: "Integrate IIT Gandhinagar’s academic and research strengths into applied training for real-world impact.",
   },
   {
     icon: <Shield className="w-6 h-6" />,
-    title: "Promote Ethical AI Development",
-    description: "Emphasize responsible, transparent, and impactful use of Artificial Intelligence",
+    title: "Nurture Innovation and Problem-Solving",
+    description: "Develop creative, ethical, and scalable solutions to real-world challenges through hands-on, project-driven learning.",
   },
 ];
 
@@ -67,7 +67,14 @@ const About = () => {
               About <span className="bg-gradient-primary bg-clip-text text-transparent">IIT Gandhinagar CDF</span>
             </h1>
             <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-              The IIT Gandhinagar Competency Development Foundation (IITGN-CDF) is a Section 8 Company incorporated under the Companies Act, 2013, established on 27th November 2024 with its registered office at the IIT Gandhinagar Campus.
+              The IIT Gandhinagar Competency Development Foundation (CDF) is a Section 8 company established under the aegis of the Indian Institute of Technology Gandhinagar to strengthen the bridge between academic excellence and industry application.
+
+CDF is envisioned as IIT Gandhinagar’s dedicated platform for advancing professional and technical competencies through innovative, hands-on, and industry-aligned programs. These programs, pioneered by IIT Gandhinagar through CDF, bring together the institute’s academic rigor, research expertise, and a strong network of industry collaborators to create meaningful pathways for upskilling and talent development.
+
+By offering intensive, residential, and application-driven programs in cutting-edge technology domains such as Artificial Intelligence, Data Science, Cloud Computing, Cybersecurity, Robotics, and Semiconductor Manufacturing, CDF aims to equip learners with the practical skills, depth of knowledge, and confidence to meet the evolving needs of modern industries.
+
+Guided by IIT Gandhinagar’s values of integrity, innovation, and impact, CDF is committed to shaping the next generation of skilled professionals who can contribute effectively to India’s technological advancement and global competitiveness.
+
             </p>
           </div>
         </div>
@@ -93,7 +100,7 @@ const About = () => {
                 ></iframe>
               </CardContent>
               <div className="p-4">
-                <h3 className="font-semibold text-foreground">IITGN Campus Tour</h3>
+                <h3 className="font-semibold text-foreground">IIT Ghandinagar Campus Tour</h3>
                 <p className="text-sm text-muted-foreground">Experience our world-class facilities and vibrant campus life</p>
               </div>
             </Card>
@@ -108,7 +115,7 @@ const About = () => {
                 ></iframe>
               </CardContent>
               <div className="p-4">
-                <h3 className="font-semibold text-foreground">Student Life at IITGN</h3>
+                <h3 className="font-semibold text-foreground">Student Life at IIT Gandhinagar</h3>
                 <p className="text-sm text-muted-foreground">Get a glimpse of the vibrant academic and cultural life at IITGN</p>
               </div>
             </Card>
@@ -150,50 +157,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Governance (Board + Leadership Sections) */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 lg:px-8">
-          <Board />
-
-          {/* Additional leadership directories as compact lists with round photo bullets */}
-          <div className="mt-12 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4 text-center">Advisory & Operational Support</h3>
-            <ul className="space-y-3">
-              {[
-                { name: 'Shri Nirmal Jha', title: 'Senior Advisor', img: '/images/Board_3.jpg' },
-                { name: 'Prof. Sam Placid', title: 'Advisor', img: '/images/Board_4.jpg' },
-                { name: 'Shri Anand Pandey', title: 'Operational Lead', img: '/images/Board_2.jpg' },
-              ].map((person, idx) => (
-                <li key={idx} className="flex items-center space-x-4 p-3 rounded-lg bg-muted/10">
-                  <img src={person.img} alt={person.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
-                  <div>
-                    <div className="font-medium text-foreground">{person.name}</div>
-                    <div className="text-sm text-muted-foreground">{person.title}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-
-            <h3 className="text-2xl font-bold text-foreground mt-8 mb-4 text-center">Executive Team</h3>
-            <ul className="space-y-3">
-              {[
-                { name: 'Prof. Rajat Moona', title: 'Director', img: '/images/Board_1.jpg' },
-                { name: 'Prof. Amit Prashant', title: 'Dean', img: '/images/Board_2.jpg' },
-                { name: 'P. K. Chopra', title: 'Registrar', img: '/images/Board_3.jpg' },
-              ].map((person, idx) => (
-                <li key={idx} className="flex items-center space-x-4 p-3 rounded-lg bg-muted/10">
-                  <img src={person.img} alt={person.name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
-                  <div>
-                    <div className="font-medium text-foreground">{person.name}</div>
-                    <div className="text-sm text-muted-foreground">{person.title}</div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
-
       {/* Why IITGN-CDF */}
       <section className="py-16 lg:py-24 bg-muted/50">
         <div className="container mx-auto px-4 lg:px-8">
@@ -218,6 +181,86 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* IIT Advantage Section */}
+<section className="py-20 lg:py-28 bg-white">
+  <div className="container mx-auto px-4 lg:px-8">
+
+    <h2 className="text-3xl lg:text-4xl font-bold text-center mb-16 text-foreground">
+      The IIT Advantage
+    </h2>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      {/* Left Text Section */}
+      <div className="space-y-10">
+
+        {/* Block */}
+        <div className="flex items-start space-x-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted">
+            <span className="text-xl">📘</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-foreground">IIT Credential</h3>
+            <p className="text-muted-foreground">
+              Postgraduate Diploma from IIT Gandhinagar with Executive Alumni Status.
+            </p>
+          </div>
+        </div>
+
+        {/* Block */}
+        <div className="flex items-start space-x-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted">
+            <span className="text-xl">🏠</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-foreground">Residential Experience</h3>
+            <p className="text-muted-foreground">
+              Live, learn, and build on campus with full access to IITGN facilities.
+            </p>
+          </div>
+        </div>
+
+        {/* Block */}
+        <div className="flex items-start space-x-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted">
+            <span className="text-xl">⚙️</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-foreground">Industry Integration</h3>
+            <p className="text-muted-foreground">
+              Fortune-500 mentors guide your projects and conduct code reviews.
+            </p>
+          </div>
+        </div>
+
+        {/* Block */}
+        <div className="flex items-start space-x-4">
+          <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-muted">
+            <span className="text-xl">🎓</span>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-foreground">Placement Cell Access</h3>
+            <p className="text-muted-foreground">
+              IITGN-CDF x Futurense placement assistance supports qualified learners.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Right Image Section */}
+      <div className="rounded-xl overflow-hidden shadow-xl">
+        <img
+          src="public\images\iit advantage.avif"  // replace with your image path
+          alt="IIT Gandhinagar Classroom"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Commitment */}
       <section className="py-16 lg:py-24">

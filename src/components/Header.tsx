@@ -51,7 +51,7 @@ const Header = () => {
               <div className="ml-3 flex flex-col justify-center leading-tight">
                 <span className="text-sm lg:text-base font-bold text-foreground">IITGN</span>
                 <span className="text-xs text-muted-foreground">Competency Development</span>
-                <span className="text-xs text-muted-foreground">Foundation Programs</span>
+                <span className="text-xs text-muted-foreground">Foundation</span>
               </div>
             </div>
           </Link>
