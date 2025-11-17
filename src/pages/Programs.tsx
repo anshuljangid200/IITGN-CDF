@@ -56,7 +56,7 @@ const programs:Program[] = [
 		link: "/gen-ai-agentic-aiml",
 		highlights: [
 			"Advanced AI methodologies",
-			"Agentic AI systems",
+			"Agentic AI syst ems",
 			"Ethical AI principles",
 			"Responsible AI governance",
 			"Scalable AI solutions",

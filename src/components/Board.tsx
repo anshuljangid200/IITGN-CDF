@@ -32,8 +32,8 @@ const members: Member[] = [
     intro:
       "Director at IITGN CDF and Dean of Research & Development at IIT Gandhinagar, focused on advancing research collaborations and translational projects.",
     bio: "Prof Vimal Mishra oversees research strategy and partnerships across IIT Gandhinagar and contributes to the leadership of IITGN Competency Development Foundation. His work spans interdisciplinary research and capacity-building in higher education.",
-    imgSrc: "/images/Board_2.jpg",
-    linkedin: "#",
+    imgSrc: "/images/Board_5.jpg",
+    linkedin: "https://www.linkedin.com/in/vimal-mishra-21162265/",
   },
   {
     id: "amit-prashant",
@@ -72,7 +72,7 @@ const members: Member[] = [
     intro:
       "Director at IITGN CDF and senior industry advisor with extensive leadership in life sciences and corporate strategy.",
     bio: "Dr. Sunil Parekh contributes industry perspective and strategic advice to IITGN CDF, drawing on senior leadership roles across life sciences and corporate sectors to strengthen industry-academic collaboration.",
-    imgSrc: "/images/Board_3.jpg",
+    imgSrc: "/images/Board_7.jpg",
     linkedin: "https://www.linkedin.com/in/sunilrparekh/",
   },
   {
@@ -82,7 +82,7 @@ const members: Member[] = [
     intro:
       "Director at IITGN CDF and strategic advisor with strong industry leadership experience in IT services and consulting.",
     bio: "Shri Narimha Rao Mannepalli brings strategic advisory experience from leadership roles at major IT services firms and supports IITGN CDF's mission to align programs with industry needs.",
-    imgSrc: "/images/Board_2.jpg",
+    imgSrc: "/images/Board_6.jpg",
     linkedin: "https://www.linkedin.com/in/narry-mannepalli/",
   },
 ];
