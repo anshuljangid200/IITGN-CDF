@@ -88,7 +88,10 @@ const Index = () => {
                 description="Learn to design, implement, and scale data pipelines and machine learning infrastructure with hands-on expertise in AutoML, MLOps, and cloud platforms."
                 icon={<Brain className="w-5 h-5" />}
                 delay={0}
+<<<<<<< HEAD
                 brochure="/brochures/data-science.pdf"
+=======
+>>>>>>> 33f11b4 (changes)
                 imgSrc="/programs/DSE.jpg"
                 showImage={false}
               />
@@ -101,7 +104,10 @@ const Index = () => {
                 description="Master modern DevOps, cloud-native architectures, and AI-augmented software applications with generative and agentic AI techniques."
                 icon={<Database className="w-5 h-5" />}
                 delay={100}
+<<<<<<< HEAD
                 brochure="/brochures/software-genai.pdf"
+=======
+>>>>>>> 33f11b4 (changes)
                 imgSrc="/programs/SEAI.JPG"
                 showImage={false}
               />
@@ -114,7 +120,10 @@ const Index = () => {
                 description="Deep dive into advanced AI methodologies, agentic systems, ethical AI, and responsible governance for scalable AI solutions."
                 icon={<><Cloud className="w-4 h-4 inline-block" /><Code className="w-4 h-4 inline-block ml-1" /></>}
                 delay={200}
+<<<<<<< HEAD
                 brochure="/brochures/ai-agentic.pdf"
+=======
+>>>>>>> 33f11b4 (changes)
                 imgSrc="/programs/AIA.jpg"
                 showImage={false}
               />

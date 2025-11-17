@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Code, Brain, CheckCircle, Download, ArrowRight } from "lucide-react";
+=======
+import { CheckCircle, ArrowRight } from "lucide-react";
+>>>>>>> 33f11b4 (changes)
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,7 +14,10 @@ type Program = {
   title: string;
   imgSrc: string;
   description: string;
+<<<<<<< HEAD
   brochure: string;
+=======
+>>>>>>> 33f11b4 (changes)
   link: string; // <-- REQUIRED, not optional
   highlights: string[];
 };
@@ -24,7 +31,10 @@ const programs:Program[] = [
 		title: "Gen AI Powered Data Science and Engineering",
 		imgSrc: "/programs/DSE.jpg",
 		description: "Learn to design, implement, and scale data pipelines and machine learning infrastructure.",
+<<<<<<< HEAD
 		brochure: "/brochures/data-science.pdf",
+=======
+>>>>>>> 33f11b4 (changes)
 		link: "/gen-ai-data-science",
 		highlights: [
 			"AutoML and big data platforms",
@@ -38,7 +48,10 @@ const programs:Program[] = [
 		title: "Gen AI Powered Software Engineering with Cloud",
 		imgSrc: "/programs/SEAI.JPG",
 		description: "Explore generative AI and agentic AI techniques applied to software development life cycles.",
+<<<<<<< HEAD
 		brochure: "/brochures/software-genai.pdf",
+=======
+>>>>>>> 33f11b4 (changes)
 		link: "/gen-ai-software-cloud",
 		highlights: [
 			"Modern DevOps practices",
@@ -52,7 +65,10 @@ const programs:Program[] = [
 		title: "Gen AI Powered AIML / AgenticAI Engineering",
 		imgSrc: "/programs/AIA.jpg",
 		description: "Deep dive into advanced AI methodologies, agentic systems, ethical AI, and responsible governance.",
+<<<<<<< HEAD
 		brochure: "/brochures/ai-agentic.pdf",
+=======
+>>>>>>> 33f11b4 (changes)
 		link: "/gen-ai-agentic-aiml",
 		highlights: [
 			"Advanced AI methodologies",
@@ -112,6 +128,7 @@ const Programs = () => {
 													<CardTitle className="text-2xl lg:text-3xl font-bold text-foreground mb-0">
 														{program.title}
 													</CardTitle>
+<<<<<<< HEAD
 													{program.brochure && (
 													<Button
 															asChild
@@ -126,6 +143,19 @@ const Programs = () => {
 																</Link>
 														</Button>
 													)}
+=======
+													<Button
+														asChild
+														variant="outline"
+														size="sm"
+														className="bg-primary-50 border-primary-100 text-primary hover:bg-primary-100 hover:text-primary-dark group smooth-button"
+													>
+														<Link to={program.link} onClick={scrollToTop} className="flex items-center gap-2">
+															<span>Know More</span>
+															<ArrowRight className="w-4 h-4 arrow-icon-smooth" />
+														</Link>
+													</Button>
+>>>>>>> 33f11b4 (changes)
 												</div>
 											</div>
 											<CardDescription className="text-base lg:text-lg text-muted-foreground">

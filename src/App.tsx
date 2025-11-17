@@ -16,6 +16,10 @@ import NotFound from "./pages/NotFound";
 import GenAIPoweredDataScience from "./pages/GenAIPoweredDataScience";
 import GenAIAgenticAi from "./pages/GenAIAgenticAi";
 import GenAIsoftwarecloud from "./pages/GenAIsoftwarecloud";
+<<<<<<< HEAD
+=======
+import ScrollToTopButton from "./components/ScrollToTopButton";
+>>>>>>> 33f11b4 (changes)
 
 const queryClient = new QueryClient();
 
@@ -41,6 +45,10 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+<<<<<<< HEAD
+=======
+        <ScrollToTopButton />
+>>>>>>> 33f11b4 (changes)
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

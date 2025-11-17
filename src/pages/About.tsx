@@ -64,6 +64,32 @@ const whyChooseUs = [
   },
 ];
 
+<<<<<<< HEAD
+=======
+const advantageHighlights = [
+  {
+    icon: <Award className="w-6 h-6 text-primary" />,
+    title: "IIT Credential",
+    description: "Postgraduate Diploma jointly awarded by IIT Gandhinagar and IITGN CDF with Executive Alumni Status.",
+  },
+  {
+    icon: <Building2 className="w-6 h-6 text-primary" />,
+    title: "Residential Experience",
+    description: "Live on campus with access to labs, library, maker spaces, and the holistic IIT experience.",
+  },
+  {
+    icon: <Target className="w-6 h-6 text-primary" />,
+    title: "Industry Integration",
+    description: "Fortune-500 mentors, design partners, and project reviews to align outcomes with real-world expectations.",
+  },
+  {
+    icon: <Shield className="w-6 h-6 text-primary" />,
+    title: "Placement Cell Access",
+    description: "Shared IITGN-CDF x Futurense placement ecosystem with interview prep, mentor hours, and curated opportunities.",
+  },
+];
+
+>>>>>>> 33f11b4 (changes)
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -235,6 +261,14 @@ const About = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Board Section */}
+      <section className="bg-muted/30">
+        <Board />
+      </section>
+
+>>>>>>> 33f11b4 (changes)
       {/* IIT Advantage Section */}
       <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
@@ -244,6 +278,7 @@ const About = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Text Section */}
+<<<<<<< HEAD
             <div className="space-y-10">
               {/* Block */}
               <div className="flex items-start space-x-4">
@@ -308,6 +343,25 @@ const About = () => {
                   </p>
                 </div>
               </div>
+=======
+            <div className="space-y-6">
+              {advantageHighlights.map((highlight) => (
+                <div
+                  key={highlight.title}
+                  className="flex items-start gap-4 rounded-2xl border border-border/80 bg-card/80 p-5 shadow-soft hover:shadow-large transition"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    {highlight.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground">{highlight.title}</h3>
+                    <p className="text-muted-foreground">
+                      {highlight.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+>>>>>>> 33f11b4 (changes)
             </div>
 
             {/* Right Image Section */}

@@ -8,6 +8,7 @@ import { Mail, Phone } from "lucide-react";
 const generalFAQs = [
   {
     question: "What is IIT Gandhinagar Competency Development Foundation?",
+<<<<<<< HEAD
     answer: "IITGN-CDF is a Section 8 (not-for-profit) company established under IIT Gandhinagar to offer professional education and advanced training programs in emerging technologies like AI, Data Science, and Software Development.",
   },
   {
@@ -17,6 +18,20 @@ const generalFAQs = [
   {
     question: "What is the difference between a Competency Development Foundation Program and a Master's degree?",
     answer: "A Competency Development Foundation Program (PG-level professional program) is a focused, industry-oriented offering (typically 6-12 months) emphasizing practical skills and job readiness, whereas a Master's degree is a longer academic program (2 years) with more emphasis on theory and research. These programs are ideal for quick career transitions and upskilling.",
+=======
+    answer:
+      "IIT Gandhinagar Competency Development Foundation (IITGN CDF) is a Section-8, not-for-profit company established by IIT Gandhinagar to deliver high-quality, industry-aligned training programs in advanced and emerging technologies.",
+  },
+  {
+    question: "Are these programs recognized?",
+    answer:
+      "Yes. These programs are jointly awarded by IIT Gandhinagar and IITGN Competency Development Foundation as official Postgraduate Diploma programs.",
+  },
+  {
+    question: "What is the difference between a CDF Diploma Program and a Master’s Degree?",
+    answer:
+      "A CDF Postgraduate Diploma is an intensive, 6-month, skills-focused professional program designed to make learners job-ready for next-generation technology roles.\nIt emphasizes hands-on training, industry tools, real-world projects, and employment readiness.\n\nA Master’s Degree is a longer academic program (1–2 years) focused on theoretical depth, research, and broader academic outcomes.",
+>>>>>>> 33f11b4 (changes)
   },
 ];
 

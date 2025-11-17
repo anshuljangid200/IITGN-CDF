@@ -16,7 +16,10 @@ interface ProgramCardProps {
   description: string;
   icon?: React.ReactNode;
   delay?: number;
+<<<<<<< HEAD
   brochure?: string;
+=======
+>>>>>>> 33f11b4 (changes)
   imgSrc?: string;
   showImage?: boolean;
   route?: string;
@@ -32,7 +35,10 @@ const ProgramCard = ({
   description,
   icon,
   delay = 0,
+<<<<<<< HEAD
   brochure,
+=======
+>>>>>>> 33f11b4 (changes)
   imgSrc,
   showImage = true,
   route,
@@ -105,6 +111,7 @@ const ProgramCard = ({
 
           {/* BUTTONS */}
           <div className="flex flex-wrap gap-3">
+<<<<<<< HEAD
             {route ? (
               <Button
                 asChild
@@ -170,6 +177,36 @@ const ProgramCard = ({
                 </Link>
               </Button>
             )}
+=======
+            <Button
+              asChild
+              variant={route ? "outline" : "ghost"}
+              size="sm"
+              className={
+                route
+                  ? `${
+                      showImage && imgSrc
+                        ? "bg-white/10 text-white border-white/30 hover:bg-white hover:text-primary"
+                        : "bg-primary-50 border-primary-100 text-primary hover:bg-primary-100 hover:text-primary-dark"
+                    } transition-colors`
+                  : `${
+                      showImage && imgSrc
+                        ? "text-white hover:text-primary hover:bg-white/10"
+                        : "text-primary hover:text-primary-dark hover:bg-transparent"
+                    }`
+              }
+            >
+              <Link
+                to={route ?? "/programs"}
+                onClick={scrollToTop}
+                aria-label={`Know more about ${title}`}
+                className="flex items-center gap-2"
+              >
+                <span>{route ? "Know More" : "Learn More"}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </Button>
+>>>>>>> 33f11b4 (changes)
           </div>
         </CardContent>
       </div>

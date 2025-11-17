@@ -1,8 +1,103 @@
+<<<<<<< HEAD
 import { Building, Laptop, BookOpen, Home, Utensils, Dumbbell, Users as UsersIcon, Clock, Users, GraduationCap, Network, Target, School } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import TimelineComponent from "@/components/TimelineComponent";
+=======
+import { useState } from "react";
+import { Building, Laptop, BookOpen, Home, Utensils, Dumbbell, Users as UsersIcon, Clock, Users, GraduationCap, Network, Target, School, Sparkles } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+
+const encodeSegment = (segment: string) => encodeURIComponent(segment).replace(/%2F/g, "/");
+const buildMediaPath = (folder: string, file: string) => `/iitcampus/${encodeSegment(folder)}/${encodeSegment(file)}`;
+const createGallery = (folder: string, files: string[]) => files.map((file) => buildMediaPath(folder, file));
+
+const highlightSlides = [
+  {
+    title: "Blithchron Main Stage",
+    description: "Headliner performances, projection-mapped sets, and student-led production crews.",
+    image: buildMediaPath("Blithchron", "blithchron-03.jpg"),
+  },
+  {
+    title: "Culture Courts",
+    description: "Mid-semester showcases, theatre clubs, and design collectives adding color to evenings.",
+    image: buildMediaPath("Culturals", "culturals-04.jpg"),
+  },
+  {
+    title: "High-Performance Labs",
+    description: "Hands-on experimentation, rapid prototyping, and simulations under faculty mentorship.",
+    image: buildMediaPath("Labs", "labs-02.jpg"),
+  },
+  {
+    title: "Sports Complex",
+    description: "Indoor arenas, outdoor fields, and aquatics teams training under floodlights.",
+    image: buildMediaPath("Sports", "sports-05.jpg"),
+  },
+];
+
+const masonryCategories = [
+  {
+    title: "Blithchron",
+    description: "The annual cultural carnival curated entirely by students—immersive art, indie music, and light installations across the quad.",
+    media: createGallery("Blithchron", ["blithchron-01.jpg", "blithchron-02.jpg", "blithchron-03.jpg", "blithchron-04.jpg", "blithchron-05.jpg", "blithchron-06.jpg", "blithchron-07.jpg", "blithchron-08.jpg"]),
+    accent: "from-primary/30 via-secondary/20 to-accent/10",
+  },
+  {
+    title: "Culturals",
+    description: "Performing arts, literary societies, design collectives, and festival nights that keep the campus creative.",
+    media: createGallery("Culturals", ["culturals-01.jpg", "culturals-02.jpg", "culturals-03.jpg", "culturals-04.jpg", "culturals-05.jpg", "culturals-06.jpg", "culturals-07.jpg", "culturals-08.jpg"]),
+    accent: "from-secondary/30 via-primary/20 to-accent/20",
+  },
+  {
+    title: "Sports",
+    description: "Inter-IIT podium finishes, sunrise runs along Sabarmati, and evening league matches under pro-grade lighting.",
+    media: createGallery("Sports", ["sports-01.jpg", "sports-02.jpg", "sports-03.jpg", "sports-04.jpg", "sports-05.jpg", "sports-06.jpg", "sports-07.jpg", "sports-08.jpg"]),
+    accent: "from-accent/30 via-primary/10 to-secondary/20",
+  },
+  {
+    title: "Tech Fests",
+    description: "Makeathons, satellite clubs, cybersecurity drills, and expo floors buzzing with prototypes.",
+    media: createGallery("Tech fests", ["tech-fests-01.webp", "tech-fests-02.webp", "tech-fests-03.webp", "tech-fests-04.webp", "tech-fests-05.webp", "tech-fests-06.webp", "tech-fests-07.webp", "tech-fests-08.webp"]),
+    accent: "from-primary/20 via-accent/20 to-secondary/30",
+  },
+];
+
+const gridCategories = [
+  {
+    title: "Advanced Labs",
+    description: "AI pods, clean rooms, and rapid prototyping bays with 24/7 access.",
+    media: createGallery("Labs", ["labs-01.jpg", "labs-02.jpg", "labs-03.jpg", "labs-04.jpg", "labs-05.jpg", "labs-06.jpg"]),
+  },
+  {
+    title: "Library & Learning Commons",
+    description: "Sunlit reading decks, multilingual collections, and digital archives with collaborative pods.",
+    media: createGallery("Library", ["library-01.jpg", "library-02.jpg", "library-03.jpg", "library-04.jpg", "library-05.jpg", "library-06.jpg"]),
+  },
+];
+
+const panoramaShots = [
+  {
+    title: "Sabarmati Promenade",
+    description: "Dawn reflections along the river-facing walkways.",
+    image: buildMediaPath("Sports", "sports-03.jpg"),
+  },
+  {
+    title: "Innovation Spine",
+    description: "Studios, labs, and maker spaces connected through a single collaborative axis.",
+    image: buildMediaPath("Labs", "labs-04.jpg"),
+  },
+  {
+    title: "Knowledge Commons",
+    description: "Tiered reading lounges overlooking the landscaped courtyards.",
+    image: buildMediaPath("Library", "library-03.jpg"),
+  },
+];
+>>>>>>> 33f11b4 (changes)
 
 const features = [
   {
@@ -68,6 +163,11 @@ const whyResidential = [
 ];
 
 const CampusLife = () => {
+<<<<<<< HEAD
+=======
+  const [activeMedia, setActiveMedia] = useState<{ title: string; description: string; src: string } | null>(null);
+
+>>>>>>> 33f11b4 (changes)
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -86,6 +186,54 @@ const CampusLife = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Campus Highlights Carousel */}
+      <section className="py-16 lg:py-24 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-col items-center text-center mb-10">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-5 py-2 text-sm font-semibold text-primary">
+              <Sparkles className="w-4 h-4" />
+              Immersive glimpses
+            </div>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mt-4">Campus Media Highlights</h2>
+            <p className="text-muted-foreground mt-3 max-w-2xl">
+              Curated frames from the campus archives capturing the energy across academics, arts, and athletics.
+            </p>
+          </div>
+
+          <Carousel className="relative" opts={{ align: "start", loop: true }}>
+            <CarouselContent>
+              {highlightSlides.map((slide, index) => (
+                <CarouselItem key={slide.title} className="md:basis-1/2 lg:basis-1/3">
+                  <article
+                    className="h-full rounded-3xl border border-border bg-card/90 shadow-soft overflow-hidden flex flex-col animate-fade-in"
+                    style={{ animationDelay: `${index * 80}ms` }}
+                  >
+                    <div className="relative">
+                      <img
+                        src={slide.image}
+                        alt={slide.title}
+                        loading="lazy"
+                        className="h-64 w-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" aria-hidden="true" />
+                    </div>
+                    <div className="p-6 flex flex-col flex-1">
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{slide.title}</h3>
+                      <p className="text-sm text-muted-foreground flex-1">{slide.description}</p>
+                    </div>
+                  </article>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="bg-background/90 shadow-soft" />
+            <CarouselNext className="bg-background/90 shadow-soft" />
+          </Carousel>
+        </div>
+      </section>
+
+>>>>>>> 33f11b4 (changes)
       {/* Campus Overview */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 lg:px-8">
@@ -119,6 +267,141 @@ const CampusLife = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      {/* Masonry Galleries */}
+      <section className="py-16 lg:py-24 bg-gradient-subtle">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">IITGN Campus Media</h2>
+            <p className="text-lg text-muted-foreground">
+              Highly visual festivals and flagship events captured in immersive masonry layouts.
+            </p>
+          </div>
+          <div className="space-y-12">
+            {masonryCategories.map((category, index) => (
+              <article
+                key={category.title}
+                className="rounded-3xl border border-border bg-card/80 shadow-soft p-6 lg:p-10 animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="mb-8">
+                  <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Masonry Collage</p>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-foreground">{category.title}</h3>
+                  <p className="text-muted-foreground mt-3 max-w-3xl">{category.description}</p>
+                </div>
+                <div
+                  className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4"
+                  style={{
+                    background: `linear-gradient(135deg, hsla(237,80%,58%,0.04), hsla(262,83%,58%,0.04))`,
+                  }}
+                >
+                  {category.media.map((src, mediaIndex) => (
+                    <figure key={src} className="break-inside-avoid rounded-2xl overflow-hidden shadow-soft">
+                      <img
+                        src={src}
+                        alt={`${category.title} moment ${mediaIndex + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition duration-500 hover:scale-[1.02]"
+                      />
+                    </figure>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Grid Galleries with Lightbox */}
+      <section className="py-16 lg:py-24">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-3">Labs & Library Spotlight</h2>
+            <p className="text-lg text-muted-foreground">
+              Tap any tile to open a responsive lightbox and explore the academic infrastructure in detail.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-10">
+            {gridCategories.map((category) => (
+              <article key={category.title} className="rounded-3xl border border-border bg-card/90 shadow-soft p-6 lg:p-10">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                  <div>
+                    <p className="text-sm uppercase tracking-[0.2em] text-muted-foreground">Grid Gallery</p>
+                    <h3 className="text-2xl font-bold text-foreground">{category.title}</h3>
+                    <p className="text-muted-foreground mt-2 max-w-2xl">{category.description}</p>
+                  </div>
+                  <span className="inline-flex items-center justify-center rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary">
+                    Lightbox Enabled
+                  </span>
+                </div>
+
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                  {category.media.map((src, mediaIndex) => (
+                    <button
+                      key={src}
+                      onClick={() =>
+                        setActiveMedia({
+                          title: `${category.title} — View ${mediaIndex + 1}`,
+                          description: category.description,
+                          src,
+                        })
+                      }
+                      className="group relative rounded-2xl overflow-hidden shadow-soft focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                      aria-label={`Open ${category.title} image ${mediaIndex + 1}`}
+                    >
+                      <img
+                        src={src}
+                        alt={`${category.title} detail ${mediaIndex + 1}`}
+                        loading="lazy"
+                        className="h-36 sm:h-48 w-full object-cover transition duration-500 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent opacity-0 group-hover:opacity-100 transition" />
+                    </button>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Panorama scroll */}
+      <section className="py-16 lg:py-24 bg-muted/50">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="flex flex-col items-center text-center mb-10">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground">Panoramic Stroll</h2>
+            <p className="text-lg text-muted-foreground mt-3">
+              Horizontal scroll of wide-format captures designed for immersive viewing.
+            </p>
+          </div>
+          <div className="overflow-x-auto no-scrollbar">
+            <div className="flex gap-6 snap-x snap-mandatory pb-4">
+              {panoramaShots.map((shot, index) => (
+                <figure
+                  key={shot.title}
+                  className="relative min-w-[280px] sm:min-w-[420px] lg:min-w-[560px] snap-start rounded-[2rem] overflow-hidden shadow-large animate-fade-in"
+                  style={{ animationDelay: `${index * 120}ms` }}
+                >
+                  <img
+                    src={shot.image}
+                    alt={shot.title}
+                    loading="lazy"
+                    className="h-64 sm:h-80 lg:h-96 w-full object-cover"
+                  />
+                  <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white p-5">
+                    <h3 className="text-lg font-semibold">{shot.title}</h3>
+                    <p className="text-sm text-white/80">{shot.description}</p>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+>>>>>>> 33f11b4 (changes)
       {/* 'A Day in the Life' section removed per content update */}
 
       {/* Why Residential Learning */}
@@ -211,6 +494,30 @@ const CampusLife = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+      <Dialog open={Boolean(activeMedia)} onOpenChange={(open) => !open && setActiveMedia(null)}>
+        <DialogContent className="max-w-4xl border-none bg-transparent shadow-none p-0">
+          {activeMedia && (
+            <div className="bg-card rounded-3xl overflow-hidden shadow-large">
+              <img
+                src={activeMedia.src}
+                alt={activeMedia.title}
+                className="w-full max-h-[32rem] object-cover"
+                loading="lazy"
+              />
+              <div className="p-6">
+                <DialogHeader className="mb-2">
+                  <DialogTitle>{activeMedia.title}</DialogTitle>
+                </DialogHeader>
+                <p className="text-muted-foreground">{activeMedia.description}</p>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+>>>>>>> 33f11b4 (changes)
       <Footer />
     </div>
   );

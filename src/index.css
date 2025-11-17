@@ -139,3 +139,30 @@
     transition-duration: 0.01ms !important;
   }
 }
+<<<<<<< HEAD
+=======
+
+@layer base {
+  button,
+  [role="button"],
+  a,
+  input[type="submit"] {
+    @apply transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+
+  a {
+    @apply hover:text-primary hover:underline;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+>>>>>>> 33f11b4 (changes)
