@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,17 @@ const Header = () => {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
 
   const navLinks = [
     { path: "/", label: "Home" },
@@ -21,9 +32,18 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 bg-white z-50 shadow-md">
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+    <>
+      {isMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm transition-opacity md:hidden"
+          aria-hidden="true"
+          onClick={() => setIsMenuOpen(false)}
+        />
+      )}
+
+      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/95 backdrop-blur">
+      <div className="container relative mx-auto px-4 lg:px-8">
+          <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-start group -ml-3 sm:-ml-5 md:-ml-6 lg:-ml-7 flex-shrink-0">
             <div className="flex items-start">
@@ -110,8 +130,10 @@ const Header = () => {
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 text-foreground hover:bg-muted rounded-lg transition-colors"
-            aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
           >
+            <span className="sr-only">Toggle navigation</span>
             {isMenuOpen ? (
               <X className="w-6 h-6" />
             ) : (
@@ -121,34 +143,41 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="md:hidden py-4 space-y-2 animate-fade-in">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsMenuOpen(false)}
-                className={`block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
-                  isActive(link.path)
-                    ? "bg-primary text-primary-foreground shadow-soft"
-                    : "text-foreground hover:bg-primary/10 hover:text-primary"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <Button
-              asChild
-              className="w-full bg-gradient-primary hover:opacity-90 transition-opacity"
+        <nav
+          id="mobile-navigation"
+          className={`md:hidden absolute left-4 right-4 top-[calc(100%+0.75rem)] z-50 origin-top space-y-2 rounded-3xl border border-border/60 bg-background/95 p-4 shadow-large transition-all duration-300 ${
+            isMenuOpen
+              ? "pointer-events-auto opacity-100 translate-y-0"
+              : "pointer-events-none opacity-0 -translate-y-2"
+          }`}
+          aria-hidden={!isMenuOpen}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.path}
+              to={link.path}
+              onClick={() => setIsMenuOpen(false)}
+              className={`block rounded-2xl px-4 py-3 text-base font-semibold transition ${
+                isActive(link.path)
+                  ? "bg-primary text-primary-foreground shadow-soft"
+                  : "text-foreground hover:bg-primary/10 hover:text-primary"
+              }`}
             >
-              <Link to="/admissions" onClick={() => setIsMenuOpen(false)}>
-                Apply Now
-              </Link>
-            </Button>
-          </nav>
-        )}
+              {link.label}
+            </Link>
+          ))}
+          <Button
+            asChild
+            className="w-full rounded-2xl bg-gradient-primary py-3 text-base font-semibold hover:opacity-90 transition"
+          >
+            <Link to="/admissions" onClick={() => setIsMenuOpen(false)}>
+              Apply Now
+            </Link>
+          </Button>
+        </nav>
       </div>
     </header>
+    </>
   );
 };
 

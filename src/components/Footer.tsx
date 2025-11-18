@@ -42,6 +42,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/admissions#refund-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 inline-block">
+                  Refund Policy
+                </Link>
+              </li>
+              <li>
                 <Link to="/contact" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium hover:translate-x-1 inline-block">
                   Contact Us
                 </Link>
@@ -65,17 +70,17 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/gen-ai-data-science" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium flex items-center space-x-1 group">
-                  <span className="group-hover:translate-x-1 transition-transform">Gen AI Powered Data Science & Engineering</span>
+                  <span className="group-hover:translate-x-1 transition-transform">PG Diploma in GenAI-Powered Data Science & Engineering</span>
                 </Link>
               </li>
               <li>
                 <Link to="/gen-ai-software-cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium flex items-center space-x-1 group">
-                  <span className="group-hover:translate-x-1 transition-transform">Gen AI Powered Software Engineering With Cloud</span>
+                  <span className="group-hover:translate-x-1 transition-transform">PG Diploma in AI-Powered Software Engineering with Cloud</span>
                 </Link>
               </li>
               <li>
                 <Link to="/gen-ai-agentic-aiml" className="text-sm text-muted-foreground hover:text-primary transition-colors font-medium flex items-center space-x-1 group">
-                  <span className="group-hover:translate-x-1 transition-transform">Gen AI Powered AIML / Agentic Engineering</span>
+                  <span className="group-hover:translate-x-1 transition-transform">PG Diploma in GenAI-Powered AI-ML & Agentic AI Engineering</span>
                 </Link>
               </li>
             </ul>

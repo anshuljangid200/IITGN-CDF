@@ -1,7 +1,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
 import { Card, CardContent } from "@/components/ui/card";
 import { Brain, Code, Server, Layers, Cloud, Rocket } from "lucide-react";
+
+const heroDescription =
+  "A hands-on program that blends full-stack development with Generative AI, Agentic AI, DevOps, and cloud-native deployment workflows.";
 
 const highlights = [
   {
@@ -89,21 +93,12 @@ const GenAISoftwareEngineering = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle text-center">
-        <div className="container mx-auto px-4 lg:px-8 max-w-4xl animate-fade-in-up">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
-            Gen AI Powered{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Software Engineering with Cloud
-            </span>
-          </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed">
-            A hands-on program that blends full-stack development with Generative AI, Agentic AI, 
-            DevOps, and cloud-native deployment workflows.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        icon={<Code className="w-16 h-16 text-primary mx-auto" aria-hidden="true" />}
+        title="Gen AI Powered"
+        highlight="Software Engineering with Cloud"
+        description={heroDescription}
+      />
 
       {/* Highlights */}
       <section className="py-16 lg:py-24">

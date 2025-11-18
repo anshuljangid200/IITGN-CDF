@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import TestimonialCard from "@/components/TestimonialCard";
 import styles from "./Placements.module.css";
 import LogoMarquee from "@/components/LogoMarquee";
-import "@/components/SmoothHovers.css";
+import { hiringPartnerLogos, trustedCompanyLogos } from "@/data/partnerLogos";
 
 const careerSupport = [
   {
@@ -180,23 +180,13 @@ const Placements = () => {
             </p>
           </div>
 
-          {(() => {
-            const hiringPaths = [
-              '/OUR%20HIRING%20PARTNERS/Apple.svg',
-              '/OUR%20HIRING%20PARTNERS/BlackRock.svg',
-              '/OUR%20HIRING%20PARTNERS/Deloitte..svg',
-              '/OUR%20HIRING%20PARTNERS/EY.svg',
-              '/OUR%20HIRING%20PARTNERS/JPM.svg',
-              '/OUR%20HIRING%20PARTNERS/LSE.svg',
-              '/OUR%20HIRING%20PARTNERS/MicroTrend.svg',
-              '/OUR%20HIRING%20PARTNERS/Nestle.svg',
-              '/OUR%20HIRING%20PARTNERS/TESLA.svg',
-            ];
-
-            return (
-              <LogoMarquee hiringTop={{ logos: hiringPaths, leftToRight: true, duration: 18 }} />
-            );
-          })()}
+          <LogoMarquee
+            hiringTop={{
+              logos: hiringPartnerLogos,
+              leftToRight: true,
+              duration: 18,
+            }}
+          />
         </div>
       </section>
 
@@ -212,22 +202,13 @@ const Placements = () => {
             </p>
           </div>
 
-          {(() => {
-            const trustedPaths = [
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Accenture.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Amazon.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Google.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Honeywell.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/IBM.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Infosys.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Microsoft.svg',
-              '/TRUSTED%20BY%20LEADING%20COMAPNIES/Siemens.svg',
-            ];
-
-            return (
-              <LogoMarquee trusted={{ logos: trustedPaths, leftToRight: false, duration: 18 }} />
-            );
-          })()}
+          <LogoMarquee
+            trusted={{
+              logos: trustedCompanyLogos,
+              leftToRight: false,
+              duration: 18,
+            }}
+          />
         </div>
       </section>
 

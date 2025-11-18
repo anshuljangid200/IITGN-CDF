@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Brain,
@@ -10,6 +11,9 @@ import {
   Layers,
   Rocket
 } from "lucide-react";
+
+const heroDescription =
+  "A hands-on program to master scalable data pipelines, distributed compute, cloud data warehousing, analytics, MLOps, and production-ready engineering.";
 
 const highlights = [
   {
@@ -77,21 +81,12 @@ const GenAIPoweredDataScience = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* HERO */}
-      <section className="pt-32 pb-16 lg:pt-40 lg:pb-24 bg-gradient-subtle text-center">
-        <div className="container mx-auto px-4 max-w-4xl animate-fade-in-up">
-          <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Gen AI Powered{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Data Science & Engineering
-            </span>
-          </h1>
-          <p className="text-lg lg:text-xl text-muted-foreground">
-            A hands-on program to master scalable data pipelines, distributed compute,
-            cloud data warehousing, analytics, MLOps, and production-ready engineering.
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        icon={<Database className="w-16 h-16 text-primary mx-auto" aria-hidden="true" />}
+        title="Gen AI Powered"
+        highlight="Data Science & Engineering"
+        description={heroDescription}
+      />
 
       {/* HIGHLIGHTS */}
       <section className="py-16 lg:py-24">

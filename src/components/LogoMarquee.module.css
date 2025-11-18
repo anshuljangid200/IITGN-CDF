@@ -104,9 +104,12 @@
 }
 
 .logo {
-  height: 24px;
+  height: 28px;
   width: auto;
+  max-height: 42px;
+  max-width: 140px;
   display: block;
+  object-fit: contain;
   filter: grayscale(0.02) saturate(0.95);
 }
 
@@ -114,6 +117,7 @@
 @media (min-width: 640px) {
   .logo {
     height: 32px;
+    max-height: 48px;
   }
 }
 

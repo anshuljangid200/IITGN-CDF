@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Linkedin } from "lucide-react";
 import styles from "./Board.module.css";
-import "./SmoothHovers.css";
 
 type Member = {
   id: string;
@@ -105,10 +104,10 @@ export const Board: React.FC<{ membersList?: Member[] }> = ({
             id="board-heading"
             className="text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-6"
           >
-            Board Of Directors
+            Board of Directors
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Distinguished leaders and experts guiding the Competency Development
+            Distinguished Leaders and Experts guiding the Competency Development
             Foundation and strengthening industry-academia partnerships.
           </p>
         </div>
